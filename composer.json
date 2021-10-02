@@ -2,6 +2,8 @@
   "name": "rianfuro/commonmark-metadata",
   "description": "Parse MultiMarkdown-like metadata at the beginning of a markdown document",
   "minimum-stability": "stable",
+  "type": "library",
+  "keywords": ["commonmark", "markdown", "metadata", "multimarkdown"],
   "license": "proprietary",
   "authors": [
     {
