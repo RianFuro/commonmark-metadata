@@ -45,8 +45,10 @@ final class MetadataParser extends AbstractBlockContinueParser
         $line = $cursor->getLine();
         if ($line === '---') return BlockContinue::finished();
 
-        [$name, $value] = explode(':', $line);
-        $this->block->data->set(strtolower($name), $value);
+        if(!empty($line)) {
+            [$name, $value] = explode(':', $line);
+            $this->block->data->set(strtolower($name), $value);
+        }
 
         return BlockContinue::at($cursor);
     }
